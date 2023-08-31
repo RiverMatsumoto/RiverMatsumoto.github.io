@@ -9,8 +9,6 @@ labels:
   - Javascript
 ---
 
-# Thoughts on Javascript
-
 I have enjoyed Javascript so far. I like that there are multiple ways to do things for people who are more comfortable with different styles, although I could see that being a style issue when collaborating with others since you need to specify some standardized style guidelines yourself. Compared to C# and C/C++, languages I am more comfortable with, it feels more like a scripting language that just works. I learned some new things from ES6 like destructuring, promises, and some other syntax specific to JS.
 
 
