@@ -14,6 +14,6 @@ labels:
 summary: "A teleoperatable rover I built that collects data for terramechanics research."
 ---
 
-<img src="../img/rover/rover.png">
+<img class="img-fluid" src="../img/rover/rover.png">
 
 I built a teleoperated rover for the purposes of terramechanics modeling research at the RoSE Lab (Robotics Space Exploration Lab) at UH Manoa. This rover's software was developed ROS (Robotics Operating System).
