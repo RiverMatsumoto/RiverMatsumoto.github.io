@@ -14,6 +14,6 @@ summary: "A dungeon crawler game built in Unity. Inspired by old school dungeon 
 
 <img class="img-fluid" src="../img/dungeon_crawler_game/dungeon_crawler_game.png">
 
-I built a dungeon crawler game inspired by old dungeon crawlers in Unity. Another inspiration for this game is Etrian Odyssey which is where some mechanics and aesthetics come from.
+I built a dungeon crawler game inspired by old dungeon crawlers in Unity. Another inspiration for this game is Etrian Odyssey which is where some mechanics and aesthetics come from. 
 
 <img src="../img/dungeon_crawler_game/dungeon_crawler_game_textbox.png">
