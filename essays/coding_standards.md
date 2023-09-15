@@ -23,7 +23,7 @@ These standards don't just apply to code. When a pattern arises in a project, li
 
 ### Nitpicky linters distract me
 
-After downloading and using the linter my computer science gave me, I went mad using the linter. When I am programming, I don't want warnings to distract me from aspects of the code that are actually functioning. This linter was warning me about spelling, the amount of new line spaces between code, highlight all of my code red, and more. This is just distracting me while I am solving a problem. The solution is to just turn off the linter until you want to refactor your code to clean it up. Even then, I do disagree with a few of the style suggestions.
+After downloading and using the linter my computer science gave me, I went mad using the linter. When I am programming, I don't want warnings to distract me from actually implementing features. This linter was warning me about spelling, the amount of new line spaces between code, highlighting all of my code red, and more. This is just distracting me while I am solving a problem. The solution is to just turn off the linter until you want to refactor your code to clean it up. Even then, I do disagree with a few of the style suggestions.
 
 I want to work on the problem, then refactor when the time is right. When I have orange or red underlines on all of my code before it is even finished, it just doesn't feel good. Even if I can ignore it, when I need to intake that signal, process it, and finally ignore the warning, it adds up over time.
 
