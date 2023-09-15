@@ -18,7 +18,7 @@ summary: "A teleoperatable rover I built that collects data for terramechanics r
 
 [Link to control software I wrote](https://github.com/ashtencodes/tvtr_control/tree/rpi/src/cr_control)
 
-<img width="400px" class="rounded float-start pe-4 mx-auto" src="../img/rover/rover.png">
+<img width="400px" class="rounded pe-4" src="../img/rover/rover.png">
 
 I built the software for a teleoperated rover for the purposes of terramechanics modeling research at the [RoSE Lab (Robotics Space Exploration Lab)](https://www.hsfl.hawaii.edu/planetary-surface-robots/) at UH Manoa. This rover's software was developed ROS (Robotics Operating System). The chassis was built by mechanical engineering students of the RoSE Lab
 

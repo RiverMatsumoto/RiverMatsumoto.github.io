@@ -31,4 +31,4 @@ when passed in data of a match, it just returns false when there are more than 2
 
 The training of the models were a lot simpler of a process. It involved hyperparameter tuning and data preprocessing which is a bit less complicated than generating a new dataset and processing 5GB worth of replays. The models I used are shown in the below image. Unsurprisingly the neural network performed the best, but by very little. Ensemble classifiers seemed to perform extremely well and they took way less computational power to train. From the ensemble classifiers, I was able to determine that a higher inputs per minute correlated to the a higher chance of winning.
 
-<img width="400px" class="rounded float-start pe-4 mx-auto" src="../img/machine_learning_smash/machine_learning_smash.png">
+<img width="400px" class="rounded pe-4" src="../img/machine_learning_smash/machine_learning_smash.png">

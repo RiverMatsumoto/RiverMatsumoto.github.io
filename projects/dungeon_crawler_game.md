@@ -12,7 +12,7 @@ labels:
 summary: "A dungeon crawler game built in Unity. Inspired by old school dungeon crawlers."
 ---
 
-<img width="400px" class="rounded float-start pe-4 mx-auto" src="../img/dungeon_crawler_game/dungeon_crawler_game.png">
+<img width="400px" class="rounded pe-4" src="../img/dungeon_crawler_game/dungeon_crawler_game.png">
 
 [Link to Github Repo](https://github.com/RiverMatsumoto/ProjectLabyrinth)
 
@@ -36,7 +36,7 @@ It took a while for me to come around on this, but RPG menu transitions need to 
 
  The functionality that I had a hard time dealing with was when UI components should be interactable or not. For example, your menu might have two section of UI that are visible, except one section isn't interactable. This would be solved by creating some sort of MenuController class with multiple UI sections. Each UI section should know where to go when the back button is pressed.
 
-<img width="400px" class="rounded float-start pe-4" src="../img/dungeon_crawler_game/dungeon_crawler_game_textbox.png">
+<img width="400px" class="rounded pe-4" src="../img/dungeon_crawler_game/dungeon_crawler_game_textbox.png">
 
 ### 3. Use raw C# classes/structs for globally state heavy objects
 
