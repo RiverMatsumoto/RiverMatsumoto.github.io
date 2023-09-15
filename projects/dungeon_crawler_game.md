@@ -34,7 +34,7 @@ I know, I know. Not the best decision. I kept doing this whenever something woul
 
 It took a while for me to come around on this, but RPG menu transitions need to be clean and easy to work with when developing a game. It hurts when implementing a feature, then having to do a side quest for an hour for UI that has no "go back" or "undo" features.
 
- The functionality that I had a hard time dealing with was when UI components should be interactable or not. For example, your menu might have two section of UI that are visible, but not interactable. This would be solved by creating some sort of MenuController class with multiple UI sections. Each UI section should know where to go when the back button is pressed.
+ The functionality that I had a hard time dealing with was when UI components should be interactable or not. For example, your menu might have two section of UI that are visible, except one section isn't interactable. This would be solved by creating some sort of MenuController class with multiple UI sections. Each UI section should know where to go when the back button is pressed.
 
 <img width="400px" class="rounded float-start pe-4" src="../img/dungeon_crawler_game/dungeon_crawler_game_textbox.png">
 

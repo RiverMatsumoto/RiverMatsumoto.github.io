@@ -12,7 +12,9 @@ summary: "I tested multiple machine learning algorithms to predict the winner of
 ---
 
 [Link to project video summary](https://www.youtube.com/watch?v=rqAENsoV8m0)
+
 [Link to Github repo](https://github.com/RiverMatsumoto/MachineLearningWithMelee)
+
 [Link to project writeup](https://docs.google.com/document/d/1RgIKeNxnsFe9RKdLdjGcb9w4bmiRxuVRLJc0QSRhgHw/edit)
 
 For my machine learning class, I trained machine learning models that classified who the winner was in a match between two people of Super Smash Brothers Melee. This project was started and finished from the data collection and data cleaning process, to the training of models. The biggest part of this project for me was getting into the nitty gritty of data collection and cleaning. The data comes from the replays at the [B-Town Beatdown Tournament](https://www.start.gg/tournament/b-town-beatdown-76/events) for Super Smash Brothers Melee.
