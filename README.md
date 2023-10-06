@@ -1,3 +1,3 @@
 # Professional Portfolio
 
-Visit my portfolio! [https://github.com/RiverMatsumoto/RiverMatsumoto.github.io]
+Visit my portfolio at https://rivermatsumoto.github.io/
