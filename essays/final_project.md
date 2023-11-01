@@ -1,4 +1,3 @@
-```
 ---
 layout: essay
 type: essay
@@ -8,7 +7,6 @@ labels:
   - Software Engineering
   - Meteor
 ---
-```
 
 ## The Problem
 
