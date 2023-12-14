@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Coding Standards and Strict Linters | River Matsumoto | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="../img/face_photo/photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="River Matsumoto | Professional Portfolio">
+    <meta property="og:url" content="https://RiverMatsumoto.github.io/essays/coding_standards.html">
+    <meta property="og:title" content="Coding Standards and Strict Linters | River Matsumoto | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="../img/face_photo/photo.jpg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Coding Standards and Strict Linters | River Matsumoto | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">River Matsumoto</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Coding Standards and Strict Linters</h1>
+  <span class="date">14 Sep 2023</span>
+  <hr>
+  <p>It’s obvious that we should have standards for our code. It helps people who will possibly look at your code in the future. You are the one who will look at your own code the most often and sometimes it hurts when looking at what you wrote in the past. One of the worst things you can do in a project is have inconsistent standards. This is important for a few very important reasons</p>
+
+<ol>
+  <li>Less overhead to comprehend your code</li>
+  <li>Your code is honest</li>
+</ol>
+
+<p>There is nothing worse than inconsistency in software. Standards encourage efficiency. If your project says that underscores should be used for member instance variables, it better stay that way. Even if you personally don’t like the style, it’s better to either stay consistent, or go through the trouble of changing the standard for the entire project.</p>
+
+<p>I experienced this when working on my dungeon crawler project. I was using Jetbrains Rider which encourages certain naming conventions by default. Even though I disliked the PascalCase naming convention for public properties, I made sure to stay consistent throughout the entire project as to not anger my future self.</p>
+
+<p>These standards don’t just apply to code. When a pattern arises in a project, like the file structure and where you store your images, you should probably keep it the way it is. For example, in Unity, a common organizational pattern is to keep non-code assets in a resources folder for easy access in your project. This is because Unity has a utility class Resources that allows you to load any asset from anywhere if it’s in a folder called Resources. These are simply organizational patterns, but I want to talk a bit more about linters.</p>
+
+<h3 id="nitpicky-linters-distract-me">Nitpicky linters distract me</h3>
+
+<p>After downloading and using the linter my computer science gave me, I went mad using the linter. When I am programming, I don’t want warnings to distract me from actually implementing features. This linter was warning me about spelling, the amount of new line spaces between code, highlighting all of my code red, and more. This is just distracting me while I am solving a problem. The solution is to just turn off the linter until you want to refactor your code to clean it up. Even then, I do disagree with a few of the style suggestions.</p>
+
+<p>I want to work on the problem, then refactor when the time is right. When I have orange or red underlines on all of my code before it is even finished, it just doesn’t feel good. Even if I can ignore it, when I need to intake that signal, process it, and finally ignore the warning, it adds up over time.</p>
+
+<h5 id="4-spaces-vs-2-spaces-indenting">4 spaces vs 2 spaces indenting</h5>
+
+<p>This one is a nitpick, but the reason I stick to 4 indent with my code is that when you have too much nesting, it gets obvious that something is probably wrong and you should probably refactor something out into its own function. When you have 2 space indenting, you can basically fit nearly 10 indentations in which it’s difficult to analyze the scoping of everything and I personally have a hard time reading it. Also I am quite biased because I started learning programming with C#, python, and C/C++ which all pretty universally use 4 space indenting. I am okay with every other code style difference in Javascript.</p>
+
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

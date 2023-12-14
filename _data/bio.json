@@ -1,0 +1,82 @@
+{
+  "basics": {
+    "name": "River Matsumoto",
+    "label": "Student",
+    "picture": "../img/face_photo/photo.jpg",
+    "email": "matsumotorjames@gmail.com",
+    "phone": "808-799-9449",
+    "website": "https://RiverMatsumoto.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
+    "location": { "address": "", "postalCode": "96816", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "RiverMatsumoto", "url": "http://github.com/RiverMatsumoto" },
+      { "network": "linkedin", "username": "River Matsumoto", "url": "https://www.linkedin.com/in/river-matsumoto-52b948235/" }
+    ]
+  },
+  "interests": [
+    { "name": "Software Engineering" },
+    { "name": "Game Development" },
+    { "name": "Machine Learning" },
+    { "name": "Robotics" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C#", "C", "C++", "Java", "Python", "Javascript", "ROS", "UnityEngine" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "Ubuntu/Linux", "Windows", "MacOS", "Git/GitHub", "g++", "TI LaunchPad" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2025)",
+      "studyType": "B.S.",
+      "startDate": "2021-08",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Arcadia Family of Companies",
+      "position": "IT Support Intern",
+      "website": "https://arcadia.org/",
+      "startDate": "2022-11",
+      "endDate": "2023-07",
+      "summary": "Supported staff and residents with software and hardware problems with IT helpdesk software.",
+      "highlights": [
+        "Responded to helpdesk tickets in a timely manner",
+        "Fixed printer, operating system, and internet connection issues."
+      ]
+    },
+    {
+      "company": "Robotics Space Exploration Lab",
+      "position": "Robotics Research Assistant",
+      "website": "https://www.hsfl.hawaii.edu/planetary-surface-robots/",
+      "startDate": "2023-8",
+      "endDate": "Present",
+      "summary": "Assisted research using robotics and computer science skills",
+      "highlights": [
+        "Troubleshoot software, hardware and networking issues over the phone",
+        "Answer phone and email responses to the ITS Help Desk"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Manoa Academic Merit Scholarship",
+      "date": "2021-Present",
+      "awarder": "State of Hawaii",
+      "summary": "Scholarships awarded to students who have a GPA of at least 3.8 upon the time of application to UH Manoa."
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}

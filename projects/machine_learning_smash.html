@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Machine Learning with Smash | River Matsumoto | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="../img/face_photo/photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="River Matsumoto | Professional Portfolio">
+    <meta property="og:url" content="https://RiverMatsumoto.github.io/projects/machine_learning_smash.html">
+    <meta property="og:title" content="Machine Learning with Smash | River Matsumoto | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="../img/face_photo/photo.jpg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Machine Learning with Smash | River Matsumoto | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">River Matsumoto</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Machine Learning with Smash</h1>
+ <p><a href="https://www.youtube.com/watch?v=rqAENsoV8m0">Link to project video summary</a></p>
+
+<p><a href="https://github.com/RiverMatsumoto/MachineLearningWithMelee">Link to Github repo</a></p>
+
+<p><a href="https://docs.google.com/document/d/1RgIKeNxnsFe9RKdLdjGcb9w4bmiRxuVRLJc0QSRhgHw/edit">Link to project writeup</a></p>
+
+<p>For my machine learning class, I trained machine learning models that classified who the winner was in a match between two people of Super Smash Brothers Melee. This project was started and finished from the data collection and data cleaning process, to the training of models. The biggest part of this project for me was getting into the nitty gritty of data collection and cleaning. The data comes from the replays at the <a href="https://www.start.gg/tournament/b-town-beatdown-76/events">B-Town Beatdown Tournament</a> for Super Smash Brothers Melee.</p>
+
+<p>While parsing through the replays and getting a feel for the dataset, I found that a lot of the replays were dead replays. I had write a few functions to filter out replays that I found had either incomplete data or were not fully completed matches between two players. The following is an example of a filtering function I used:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">is_real_match</span><span class="p">(</span><span class="n">game_instance</span><span class="p">):</span>
+    <span class="n">zero_percent_stocks</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">game_instance</span><span class="p">[</span><span class="s">'stats'</span><span class="p">][</span><span class="s">'stocks'</span><span class="p">]</span> <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="s">'endPercent'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_percent_stocks</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<p>when passed in data of a match, it just returns false when there are more than 2 zero percent stocks. A zero percent stock is when someone loses a stock with zero percent. This usually only happens during warmups and so I filtered them out.</p>
+
+<p>The training of the models were a lot simpler of a process. It involved hyperparameter tuning and data preprocessing which is a bit less complicated than generating a new dataset and processing 5GB worth of replays. The models I used are shown in the below image. Unsurprisingly the neural network performed the best, but by very little. Ensemble classifiers seemed to perform extremely well and they took way less computational power to train. From the ensemble classifiers, I was able to determine that a higher inputs per minute correlated to the a higher chance of winning.</p>
+
+<p><img width="400px" class="rounded pe-4" src="../img/machine_learning_smash/machine_learning_smash.png" /></p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

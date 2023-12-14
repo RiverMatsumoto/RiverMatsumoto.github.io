@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Dungeon Crawler Game | River Matsumoto | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="../img/face_photo/photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="River Matsumoto | Professional Portfolio">
+    <meta property="og:url" content="https://RiverMatsumoto.github.io/projects/dungeon_crawler_game.html">
+    <meta property="og:title" content="Dungeon Crawler Game | River Matsumoto | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="../img/face_photo/photo.jpg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Dungeon Crawler Game | River Matsumoto | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">River Matsumoto</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Dungeon Crawler Game</h1>
+ <p><img width="400px" class="rounded pe-4" src="../img/dungeon_crawler_game/dungeon_crawler_game.png" /></p>
+
+<p><a href="https://github.com/RiverMatsumoto/ProjectLabyrinth">Link to Github Repo</a></p>
+
+<p>In my spare time, I am building a dungeon crawler game inspired by old dungeon crawlers in Unity. Another inspiration for this game is Etrian Odyssey which is where some mechanics and aesthetics come from.</p>
+
+<p>Throughout this process, I focused a lot on project architecture to help scale the project although I do have regrets about some decisions I made along the way. Enough regrets that I am considering rewriting the project and taking along well written components with me. I learned a lot throughout the process of building this project, and I have a small list of things that I have learned:</p>
+
+<h3 id="1-globally-accessible-systems-should-know-nothing-about-scene-specific-objects">1. Globally accessible systems should know <strong>nothing</strong> about scene specific objects</h3>
+
+<p>When adding global systems such as MapSystems or BattleSystems, I didn’t realize how attrocious it is to have to think about whether the global system is in a certain scene or not.</p>
+
+<p>For example, in the Labyrinth scene, my MapSystem had a reference to the player in the scene for managing positions. The player’s responsibility is only to move around and interact with the labyrinth. However, since the player was not a global DontDestroyOnLoad GameObject, the MapSystem would break if the scene changed. So what did I decide to do?</p>
+
+<p><strong>I made the player a DontDestroyOnLoad GameObject along with the global systems.</strong></p>
+
+<p>I know, I know. Not the best decision. I kept doing this whenever something would happen and it makes state management a pain. The real solution was to treat the MapSystem as a service that takes in data to do what it needs to, then return a result. This would make the project a lot cleaner since I know that the global system will do exactly what you tell it to.</p>
+
+<h3 id="2-rpg-games-need-a-robust-menu-navigation-system">2. RPG games need a robust menu navigation system</h3>
+
+<p>It took a while for me to come around on this, but RPG menu transitions need to be clean and easy to work with when developing a game. It hurts when implementing a feature, then having to do a side quest for an hour for UI that has no “go back” or “undo” features.</p>
+
+<p>The functionality that I had a hard time dealing with was when UI components should be interactable or not. For example, your menu might have two section of UI that are visible, except one section isn’t interactable. This would be solved by creating some sort of MenuController class with multiple UI sections. Each UI section should know where to go when the back button is pressed.</p>
+
+<p><img width="400px" class="rounded pe-4" src="../img/dungeon_crawler_game/dungeon_crawler_game_textbox.png" /></p>
+
+<h3 id="3-use-raw-c-classesstructs-for-globally-state-heavy-objects">3. Use raw C# classes/structs for globally state heavy objects</h3>
+
+<p>This one is a bit simpler. One thing I commonly ran into was that MonoBehavior gameobjects felt a bit more difficult to work with when they had too much state in them. It’s a lot easier to create a data structure that can be held by a scriptable object that lives in your assets folder. One example of how I used this was with the player’s party. I had a tendency to make MonoBehaviors global singletons that stored data, but I felt it was more appropriate to store them as assets because there is no tight coupling to a specific type when accessing the data.</p>
+
+<h3 id="4-complex-frameworks-are-hard">4. Complex frameworks are hard</h3>
+
+<p>I played around with using dependency injection with <a href="https://github.com/modesttree/Zenject">Zenject</a> in Unity, however, I think my lack of experience caused my implementations to be quite poor. The main issue I ran into is that it takes a lot of time to bind instances and I felt like I was misusing it.</p>
+
+<p>One thing I really like about Zenject was it’s factory api. The fact it would inject dependencies for you while using factories was amazing to me. Zenject does feel a bit overkill for a project like mine however, but currently I am enjoying it.</p>
+
+<h3 id="conlusion">Conlusion</h3>
+
+<p>There is a lot of work to be done in this project. In its current state, I need to implement more fundamental systems such as a menu system, map loading system, and battle system. Overall I am happy with how much I have learned! However, I might switch from using unity to either Godot or Unreal Engine due to the current state of Unity’s developer relations.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
